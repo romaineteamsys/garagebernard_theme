@@ -1,0 +1,46 @@
+.highlighted-content {
+    .highlighted-img {
+        width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 767px) {
+            background-position: center;
+        }
+
+        .highlighted-wysiwyg {
+            position: absolute;
+            top: 44px;
+            left: 44px;
+            min-height: 233px;
+            background-color: white;
+            max-width: 486px;
+            padding: 30px 36px;
+
+            .inner-content {
+                position: relative;
+                color: #666666;
+                font-size: 15px;
+                line-height: 18px;
+                strong {
+                    color: #000000;
+                }
+
+                .close-btn-show-more {
+                    position: absolute;
+                    font-size: 15px;
+                    color: #666666;
+                    background-color: #ffffff;
+                    padding: 0;
+                    top: -15px;
+                    right: -15px;
+                    cursor: pointer;
+            
+                    :hover {
+                      color: #00ADEF;
+                    }
+                  }
+            }
+        }
+    }
+}

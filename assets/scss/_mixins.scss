@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "DaimlerCAC-Regular";
+  src: url("../fonts/DaimlerCAC-Regular.woff2") format("woff2");
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: "DaimlerCS-Demi";
+  src: url("../fonts/DaimlerCS-Demi.woff2") format("woff2");
+  font-display: "swap";
+}
+
+@font-face {
+  font-family: "DaimlerCS-Regular";
+  src: url("../fonts/DaimlerCS-Regular.woff2") format("woff2");
+  font-display: "swap";
+}
+
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: rl($font-file+'.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin body-font {
+  font-family: "DaimlerCS-Regular", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
+  font-weight: 400;
+  color: #707070 !important;
+  margin: 0;
+}
+
+@mixin h1-font {
+  font-family: "DaimlerCAC-Regular", serif !important;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: $secondary;
+  margin-bottom: 24px;
+}
+
+@mixin h2-font {
+  font-family: 'DaimlerCAC-Regular', serif !important;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 500;
+  color: $secondary;
+  margin-bottom: 28px;
+}
+
+@mixin h3-font {
+  font-family: 'DaimlerCS-Regular', serif !important;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  color: $secondary;
+  margin-bottom: 24px;
+}
+
+@mixin h4-font {
+  font-family: 'DaimlerCS-Regular', serif !important;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+  color: $secondary;
+  margin-bottom: 20px;
+}
+
+@mixin h5-font {
+  font-family: 'DaimlerCS-Regular', serif !important;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $secondary;
+  margin-bottom: 17px;
+}

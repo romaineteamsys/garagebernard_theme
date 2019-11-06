@@ -1,0 +1,162 @@
+.footer {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #252525, #1C1C1C, #171717, #171717, #171717);
+    color: white;
+    padding: 0;
+
+    #breadcrumbs {
+        a {
+            color: #00ADEF;
+        }
+    }
+
+    h3 {
+        color: white;
+        font-family: "DaimlerCAC-Regular", serif !important;
+    }
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    .footer-home-link {
+        color: #00ADEF;
+    }
+
+    .row {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: solid #999999 1px;
+    }
+
+    input {
+        width: 370px;
+        margin-right: 9px;
+        height: 31px;
+        &::placeholder {
+            padding: 7px;
+        }
+    }
+
+    .row:last-child {
+        border-bottom: none;
+    }
+
+    .logo-footer-container {
+        background-color: $grey;
+        padding: 22px;
+        width: 180px;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 767px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-brand-footer {
+            width: 100%;
+        }
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        .footer-menu-columns {
+            display: block;
+            padding: 0 9px;
+            h3 {
+                font-size: 14px;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 20px;
+                font-family: "DaimlerCS-Regular", sans-serif !important;
+            }
+            .footer-menu-link {
+                color: #999999;
+                font-size: 14px;
+                line-height: 25px;
+                font-weight: 400;
+                &:hover {
+                    text-decoration: none;
+                    color: #00adef;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        background-color: $primary;
+        color: #999999;
+        padding: 14px 0 64px 0;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: right;
+
+        .copyright-menu {
+            list-style: none;
+            .list-inline-item {
+                margin-right: 0px;
+            }
+            .menu-separator {
+                margin:0 10px;
+            }
+            a {
+                color: #999999;
+                &:hover {
+                    text-decoration: none;
+                    color: #00adef;
+                }
+            }
+        }
+    }
+
+    .socials {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        max-width: 250px;
+
+        a {
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        a.call-to-action-link {
+            margin: auto;
+        }
+    }
+}
+
+.warning-row {
+    background-color: $grey;
+    text-align: center;
+    padding: 48px;
+    text-transform: uppercase;
+
+    h3 {
+        font-family: 'Open Sans Regular', sans-serif !important;
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 400;
+        color: $primary;
+        margin-bottom: 0;
+    }
+}
+
+.btn-submit {
+    width: auto !important;
+}
+
+.wpcf7-response-output {
+    margin: 2em 0em 1em !important;    
+}
+
+.wpcf7-mail-sent-ok {
+    background-color: $blue !important;
+    color: white !important;
+    border: none !important;
+}

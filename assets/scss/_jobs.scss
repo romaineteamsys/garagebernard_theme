@@ -1,0 +1,120 @@
+.jobs-list {
+
+    .thumbnail-jobs {
+        width: 318px;
+        height: 174px;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .order-1 {
+        .thumbnail-jobs {
+            border-right: 5px solid $secondary;
+        }
+    }
+
+    .order-12 {
+        .thumbnail-jobs {
+            border-left: 5px solid $secondary;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .order-1,
+        .order-6,
+        .order-12 {
+            order: unset;
+        }
+    }
+
+    .header-section {
+        margin-bottom: 60px;
+    }
+
+    .job-banner {
+        margin-bottom: 40px;
+        background-size: cover, cover !important;
+        padding: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        h3 {
+            color: white;
+        }
+    }
+
+    .job-item {
+        margin-bottom: 40px;
+        border: 1px solid #D9D9D9;
+        display: flex;
+        flex-wrap: wrap;
+
+        .image-col,
+        .cta-col {
+            width: 25%;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .center-col {
+            width: 50%;
+            padding: 15px;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .cta-col,
+        .center-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .job-list-title {
+        a {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: $primary;
+            position: relative;
+            text-transform: uppercase;
+
+            &:after {
+                position: absolute;
+                right: -40px;
+                bottom: 6px;
+                content: '';
+                width: 30px;
+                height: 5px;
+                background-color: $secondary;
+            }
+        }
+    }
+
+    .job-list-footer {
+        font-weight: 700;
+    }
+
+    .cta-col {
+        background-color: $primary;
+        color: white;
+        align-items: center;
+        text-align: center;
+        width: 318px;
+        height: 174px;
+        padding: 0 15px;
+
+        .btn {
+            color: white;
+        }
+    }
+}

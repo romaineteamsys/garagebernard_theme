@@ -1,0 +1,12 @@
+.homepage__title{
+    font-size: 30px;
+}
+
+.homepage__titleBorder{
+    padding: 50px;
+    border: solid 8px #D0021B;
+}
+
+.content__size--small {
+    font-size: 0.75rem;
+}

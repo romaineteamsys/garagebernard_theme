@@ -1,0 +1,61 @@
+/* ******************* grid content ************************ */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid-content {
+    padding: 60px 0;
+    text-align: center;
+    background-color: black;
+
+    .custom-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+        height: auto;
+    }
+
+    .custom-card-item {
+        position: relative;
+        text-align: left;
+        background: linear-gradient(180deg,#333,#242424);
+        padding: 13px 15px 14px;
+
+        .custom-card-img {
+            height: 50px;
+            width: auto;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-bottom: 12px;
+        }
+
+        .grid-icons-title {
+            font-family: "DaimlerCAC-Regular", serif !important;
+            font-weight: 400;
+        }
+
+        .right-arrow {
+            position: absolute;
+            right: 14px;
+            bottom: 14px;
+            height: 14px;
+        }
+
+        &:hover {
+            background: #333;
+        }
+    }
+}
+
+.grid_icons {
+    .grid-icon {
+        height: 60px;
+        width: auto;
+        margin-bottom: 30px;
+    }
+}
+
+/* ******************* end grid content ************************ */

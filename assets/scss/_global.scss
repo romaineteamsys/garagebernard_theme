@@ -1,0 +1,199 @@
+/* ******************* Global ************************ */
+body {
+  @include body-font;
+}
+
+#global {
+  background-color: black;
+}
+
+h1 {
+  @include h1-font;
+}
+
+h2 {
+  @include h2-font;
+}
+
+h3 {
+  @include h3-font;
+}
+
+h4 {
+  @include h4-font;
+}
+
+h5 {
+  @include h5-font;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-light {
+  background-color: $grey !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 8px 13px 9px 13x;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: white;
+
+  &.btn-primary {
+    background-color: #00ADEF;
+    border-color: #00ADEF;
+
+    &:hover {
+      background-color: #0088c6;
+    border-color: #0088c6;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: #3c3c3c;
+    border-color: #3c3c3c;
+
+    &:hover {
+      background-color: #2a2a2a;
+      border-color: #2a2a2a;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-outline-secondary {
+  color: $secondary;
+  border-color: $secondary;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.small-text {
+  font-size: $font-size-base * 0.8125;
+}
+
+.scroll-top {
+  font-size: 14px;
+  color: $white;
+  &.big {
+    font-size: 42px;
+    font-weight: 100;
+  }
+}
+
+.full-width-map {
+  height: 211px;
+}
+
+strong {
+  color: $secondary;
+  a {
+    color: $secondary;
+  }
+}
+
+option {
+  color: black;
+}
+
+.container-radio {
+  display: block;
+  position: relative;
+  padding: 0 12px 0 25px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 17px;
+  user-select: none;
+}
+
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: black;
+  border: solid 1px white;
+  border-radius: 0px;
+}
+
+.container-radio:hover .checkmark,
+.container-radio:hover input~.checkmark {
+  background-color: white;
+}
+
+.container-radio .checkmark.checked,
+.container-radio input:checked~.checkmark {
+  background-color: white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  line-height: 18px;
+  color: white;
+}
+
+.container-radio .checkmark.checked:after,
+.container-radio input:checked~.checkmark:after {
+  display: block;
+}
+
+.container-radio .checkmark:after {
+  top: -1px;
+  left: 4px;
+  width: 8px;
+  height: 0px;
+  background: $secondary;
+}
+
+#credit-simulator {
+  z-index: 1000;
+  .cta-btn {
+    text-transform: none !important;
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  margin-top: -14px;
+  margin-bottom: 14px;
+}
+
+/* ******************* end-global ************************ */
+
+.xdebug-var-dump {
+  color: white;
+}

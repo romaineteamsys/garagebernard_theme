@@ -1,0 +1,586 @@
+/* ******************* NAVBAR ************************ */
+
+.navbar {
+    height: 98px;
+    padding: 0;
+    justify-content: flex-start;
+    background-color: #F5F5F5;
+
+    &.bg-white {
+        background-color: #F5F5F5;
+    }
+
+    &.bg-dark {
+        // background-color: $black !important;
+        background: linear-gradient(to right, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 60%) !important;
+    }
+
+    .menu-btn {
+        text-transform: uppercase;
+        font-weight: 400;
+        cursor: pointer;
+        font-size: 12px !important;
+        letter-spacing: 2px;
+    }
+
+    .main-menu-links {
+        display: flex;
+        list-style: none;
+        margin-bottom: 0;
+
+        a {
+            color: white;
+            padding: 0 18px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: none;
+                color: $secondary;
+            }
+
+            &.active {
+                border-bottom: solid 3px $secondary;
+            }
+
+            &.dropdown-toggle {
+                line-height: 20px;
+            }
+
+            &.dropdown-toggle::after {
+                display: none;
+            }
+        }
+    }
+
+    .container {
+        justify-content: flex-start;
+    }
+
+    .icon-phone {
+        color: rgba(0, 0, 0, 0.5);
+
+        i {
+            font-size: 26px;
+        }
+    }
+
+    .logo-mercedes {
+        height: 57px;
+        width: 57px;
+        margin-right: 20px;
+
+        @media (max-width: 991px) {
+            top: 50%;
+            transform: translateY(-50%) !important;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .mercedes-typo {
+        width: 103px;
+        height: 100%;
+
+        @media (max-width: 991px) {
+            top: 50%;
+            transform: translateY(-50%) !important;
+            left: 100px;
+            width: 97px;
+            height: auto;
+        }
+    }
+
+    .logo-centretoile {
+        width: 103px;
+        text-align: right;
+        height: 100%;
+
+        @media (max-width: 991px) {
+            top: 50%;
+            transform: translateY(-50%) !important;
+            right: 54px;
+            width: 62px;
+            left: unset;
+            height: auto;
+        }
+    }
+
+    .nav-item.show {
+        .triangle-bottom {
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 14px solid white;
+            position: absolute;
+            bottom: -40px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+    .dropdown-menu {
+        position: fixed;
+        top: 98px;
+        left: 0;
+        width: 100%;
+        padding: 50px 0;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+
+        .closebtn-dropdown {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            color: $dark;
+            font-size: 20px;
+
+            :hover {
+                color: $black;
+            }
+        }
+
+        .dropdown-menu-title {
+            @include h1-font;
+            color: $dark;
+        }
+
+        .overflowing-content {
+            display: flex;
+
+            .mega-menu-content-type {
+                width: 100%;
+            }
+
+            .mega-menu-content-type:not(:last-child) {
+                margin-right: 43px;
+            }
+
+            .dropdown-menu-subtitle {
+                @include h3-font;
+                color: $dark;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                padding-left: 0;
+                padding-right: 0;
+                border-bottom: solid 1px $black;
+                display: block;
+            }
+
+            .mega-menu-item-title {
+                color: $dark;
+                margin-bottom: 11px;
+
+                .mega-menu-link {
+                    color: $dark;
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: "DaimlerCS-Regular", sans-serif !important;
+                }
+            }
+        }
+    }
+}
+
+.contact-navbar {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: right;
+    padding: 0 23px;
+    white-space: nowrap;
+
+    a {
+        color: $white;
+    }
+}
+
+.fixed-top {
+    z-index: 11;
+}
+
+.icon-Menu {
+    font-size: 35px;
+}
+
+.dropdown:hover>.dropdown-menu {
+    // display: block;
+}
+
+.navbar.fixed-top.shrink {
+    height: 78px;
+
+    .dropdown-menu {
+        top: 78px;
+    }
+
+    .nav-item.show .triangle-bottom,
+    .nav-item:hover .triangle-bottom {
+        bottom: -30px;
+    }
+}
+
+.icon-Tel {
+    background: url("../img/smartphone.svg");
+    width: 36px;
+    display: inline-block;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
+
+    svg {
+        fill: $secondary;
+    }
+}
+
+.brand-logo {
+    margin: 0 auto 0 0;
+    width: 128px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.overlay-menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 4001;
+    left: 0;
+    top: 75px;
+    background-color: $white;
+    overflow-y: scroll;
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+
+    #close-nav-btn {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-width: 84%;
+        width: 84%;
+        min-width: 84%;
+        margin: 0 auto;
+        background-color: $secondary;
+
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+
+    .overlay-content {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 65px;
+
+        a {
+            color: $primary;
+            font-size: 31px;
+            padding: 15px 16px;
+            line-height: 33px;
+            font-family: "DaimlerCAC-Regular", serif !important;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.dropdown-toggle::after {
+                display: block;
+                content: "";
+                background-image: url('../img/caretup.svg');
+                width: 14px;
+                height: 10px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top: none;
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+                position: absolute;
+                right: 21px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .dropdown-menu {
+            position: relative;
+            padding: 0;
+            top: 0;
+            background: none;
+
+            .overflowing-content {
+                display: block;
+                text-align: center;
+
+                .mega-menu-content-type {
+                    h3 {
+                        color: $primary;
+                        margin-bottom: 11px;
+                        font-size: 20px;
+                        line-height: 23px;
+                        margin-top: 12px;
+                    }
+
+                    .mega-menu-item-title {
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-family: "DaimlerCS-Regular", sans-serif !important;
+                    }
+                }
+            }
+        }
+
+        .overlay-company-name {
+            font-size: 17px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        .overlay-contact-infos {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
+            color: black;
+
+            a {
+                font-size: 14px;
+                line-height: 17px;
+                font-family: "DaimlerCS-Regular", sans-serif !important;
+                padding: 0;
+                font-weight: 400;
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            img {
+              height: 23px; 
+            }
+        }
+    }
+
+    .sub-footer {
+        display: none;
+        position: relative;
+        bottom: 0;
+        width: 88%;
+        margin: 0 auto;
+    }
+
+    a {
+        transition: 0.3s;
+    }
+
+    a:hover,
+    a:focus {
+        color: $primary;
+    }
+
+    .closebtn {
+        top: 25px;
+        z-index: 10000;
+        color: white;
+        position: fixed;
+        right: 16px;
+        left: unset;
+
+        i {
+            font-size: 28px;
+            color: white;
+            color: $secondary;
+        }
+    }
+
+    .contact-menu-btn {
+        position: absolute;
+        right: -45px;
+        font-size: 30px;
+        background-color: transparent;
+
+        @media (max-width: 991px) {
+            right: 0;
+        }
+
+        i {
+            font-size: 28px;
+            color: $secondary;
+        }
+    }
+
+    @media screen and (max-height: 450px) {
+        .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-toggler {
+        display: block;
+        border: none;
+        width: 7.9vw;
+        padding: 0;
+        background: white;
+        color: $secondary;
+    }
+}
+
+.call-to-action-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+@media (max-width: 1200px) {
+    .main-menu-links {
+        display: none;
+    }
+
+    .navbar-toggler.mobile-version {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+    }
+
+    .fixed-top-2.shrink {
+        ul.navbar-nav.container {
+            max-width: none;
+        }
+    }
+
+    .fixed-top-2 {
+        .brand-logo-second-nav {
+            display: flex;
+        }
+    }
+
+    .navbar-nav {
+        padding-left: 1rem;
+    }
+
+    .navbar .call-to-action-links .cta-btn {
+        display: none;
+    }
+
+    .menu-btn,
+    .transparent-btn-icon {
+        display: none;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        @media (max-width: 991px) {
+            top: 50%;
+            transform: translateY(-50%) !important;
+            right: 0;
+            width: 62px;
+            left: unset;
+            position: absolute;
+            height: auto;
+            padding: 0;
+
+            .navbar-toggler-icon {
+                width: 17px;
+                height: 14px;
+            }
+        }
+    }
+
+    .brand-logo {
+        margin: 5px auto 5px 0;
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        transform: translateX(-50%);
+        padding: 0;
+        width: 120px;
+
+        img {
+            width: 120px;
+            height: auto;
+        }
+    }
+
+    #navbar-sub-footer {
+        display: none !important;
+    }
+
+    #navbar-sub-footer-mobile {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        height: 75px;
+        font-size: 30px;
+        line-height: 55px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0 0.7rem;
+    }
+
+    #navbar-sub-footer-mobile {
+        display: none;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar-collapse.collapse.show {
+        margin-top: 50px;
+    }
+
+    .shrink .navbar-collapse.collapse.show {
+        margin-top: 0px;
+    }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        width: 100vw;
+        margin-left: -32px;
+    }
+}
+
+@media (min-width: 750px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu .mega-menu-item-img-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* ******************* END-NAVBAR ************************ */

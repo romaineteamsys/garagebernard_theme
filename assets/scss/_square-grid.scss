@@ -1,0 +1,52 @@
+.grid-content {
+    h2 {
+        font-size: 23px;
+        text-transform: uppercase;
+        color: $secondary;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 48px;
+    }
+
+    .custom-cards {
+        display: grid;
+        grid-gap: 30px;
+    }
+
+    .custom-card-item {
+        position: relative;
+        text-align: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h4 {
+            margin-bottom: 0;
+        }     
+        
+        .small-text {
+            margin-bottom: 0;
+            color: $primary;
+            font-size: 14px;
+        }
+    }
+
+    .custom-card-item:hover {
+        .image {
+            opacity: 0.3;
+        }
+
+        .middle {
+            opacity: 1;
+        }
+
+        .cta-image-overlay {
+            opacity: 1;
+            background-color: $primary;
+        }
+    }
+}

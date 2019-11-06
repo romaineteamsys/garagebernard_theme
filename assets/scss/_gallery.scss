@@ -1,0 +1,180 @@
+.gallery-section {
+    margin: 120px auto !important;
+    padding: 0;
+
+    h2 {
+        font-size: 23px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        color: $secondary;
+    }
+
+    .gallery,
+    .slick-gallery {
+        margin-top: 40px;
+        margin-bottom: 0px;
+
+        .grid-item {
+            position: relative;
+
+            .hover-description {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                color: white;
+                padding: 16px 23px;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 700;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+
+            .hovering-description {
+                display: none;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                color: white;
+                background-color: rgba(40, 36, 39, .6);
+                height: 100%;
+                width: 100%;
+                padding: 16px 23px;
+                justify-content: center;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-bottom: 14px;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    line-height: 20px;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .hover-description {
+                    display: none;
+                }
+
+                .hovering-description {
+                    display: flex;
+                    flex-direction: column;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery-section.not-realisations-page {
+    margin: 0 !important;
+    background-color: $primary;
+    color: white;
+    height: 700px;
+
+    .inner-gallery {
+        padding: 120px 0;
+    }
+
+    h3.text-center {
+        color: white;
+        font-size: 33px;
+        text-transform: uppercase;
+    }
+
+    .grid-item-with-background-img {
+        background-size: cover;
+        height: 350px;
+        margin: 0 15px;
+    }
+
+    .slick-dots {
+        bottom: -80px;
+
+        li {
+            width: 84px;
+
+            button {
+                width: 84px;
+
+                &::before {
+                    content: "";
+                    width: 84px;
+                    height: 5px;
+                    text-align: center;
+                    color: white;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.grid-item,
+.grid-sizer {
+    margin-bottom: 10px;
+    width: calc(33.333% - 7px);
+}
+
+.complete-gallery {
+    .gallery-bloc {
+        display: flex;
+        margin-bottom: 22px;
+        margin-left: -10px;
+        margin-right: -10px;
+
+        .gallery-left-side {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .gallery-right-side {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .w-8 {
+            width: 66%;
+            min-width: 66%;
+        }
+
+        .w-50 {
+            min-width: 50%;
+        }
+
+        img {
+            object-fit: contain;
+            margin-bottom: 22px;
+            padding: 0 10px;
+        }
+    }
+}
