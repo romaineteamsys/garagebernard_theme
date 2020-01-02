@@ -8,7 +8,7 @@
  $nav_menu_items = wp_get_nav_menu_items(2);
  $logoMercedes = get_template_directory_uri() . '/assets/img/logomercedes.svg';
  $mercedes_typo = get_template_directory_uri() . '/assets/img/mercedes-typo.svg';
- $logo_centretoile = get_template_directory_uri() . '/assets/img/logo-centretoile.png';
+ $logo_centretoile = get_template_directory_uri() . '/assets/img/logo-garagebernard.png';
  $phone = get_field( 'phone', 'option' );
  $address = get_field( 'address', 'option' );
  
